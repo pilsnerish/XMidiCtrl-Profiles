@@ -1,0 +1,176 @@
+#----------------------------------------------------------------------------------------------------------------------
+# XMidiCtrl Aircraft Profile
+#
+# Configuration for the Rotate MD-11
+#
+# Created by Marco Auer (VirtualCPT) for the XMidiCtrl plugin
+# 
+# How to use:
+#   1. Copy this file into the profile directory of XMidiCtrl
+#   2. Adjust the port_in and port_out variables
+#----------------------------------------------------------------------------------------------------------------------
+# Version 1.0
+#  + Initial version
+#----------------------------------------------------------------------------------------------------------------------
+
+title      = "Rotate MD-11"
+version    = "1.01"
+
+# Behringer X-Touch Mini
+[[device]]
+name       = "Behringer X-Touch Mini"
+port_in    = 0
+port_out   = 1
+sl_dataref = "xmidictrl/sublayer"
+mapping_in = [
+  #--------------------------------------------------------------------------------------------------------------------
+  # Layer A
+  #--------------------------------------------------------------------------------------------------------------------
+  
+  # Slider
+  { ch = 11, cc = 0,  type = "sld", command_up = "Rotate/aircraft/controls_c/park_brake_dn", command_down = "Rotate/aircraft/controls_c/park_brake_up" },
+  
+  # Encoders
+  { ch = 11, cc = 1,  type = "enc", command_up = "Rotate/aircraft/controls_c/baro_set_l_up", command_down = "Rotate/aircraft/controls_c/baro_set_l_dn" },
+  { ch = 11, cc = 2,  type = "enc", command_up = "Rotate/aircraft/controls_c/minim_alt_set_l_up", command_down = "Rotate/aircraft/controls_c/minim_alt_set_l_dn" },
+  { ch = 11, cc = 3,  type = "enc", command_up = "Rotate/aircraft/controls_c/fgs_spd_sel_up", command_down = "Rotate/aircraft/controls_c/fgs_spd_sel_dn" },
+  { ch = 11, cc = 4,  type = "enc", command_up = "Rotate/aircraft/controls_c/fgs_hdg_sel_up", command_down = "Rotate/aircraft/controls_c/fgs_hdg_sel_dn" },
+  { ch = 11, cc = 5,  type = "enc", command_up = "Rotate/aircraft/controls_c/fgs_alt_sel_up", command_down = "Rotate/aircraft/controls_c/fgs_alt_sel_dn" },
+  { ch = 11, cc = 6,  type = "enc", command_up = "Rotate/aircraft/controls_c/fgs_pitch_sel_up", command_down = "Rotate/aircraft/controls_c/fgs_pitch_sel_dn" },
+  { ch = 11, cc = 7,  type = "enc", command_up = "Rotate/aircraft/controls_c/eis_wx_brt_l_up", command_down = "Rotate/aircraft/controls_c/eis_wx_brt_l_dn" },
+  { ch = 11, cc = 8,  type = "enc", label = "xpdr", dataref = "Rotate/aircraft/controls/atc_mode_sel", modifier_up = 1, modifier_down = -1, value_min = 0, value_max = 3 },
+  
+  # Encoder Buttons
+  { ch = 11, cc = 9,  type = "pnp", command_push = "Rotate/aircraft/controls_c/baro_std_set_l", command_pull = "Rotate/aircraft/controls_c/baro_units_l" },
+  { ch = 11, cc = 10, type = "pnp", command_push = "Rotate/aircraft/controls_c/minim_reset_l", dataref_pull = "Rotate/aircraft/controls/minim_ra_baro_l", values_pull = ["0", "1"] },
+  { ch = 11, cc = 11, type = "pnp", command_push = "Rotate/aircraft/controls_c/fgs_spd_sel_mode_up", command_pull = "Rotate/aircraft/controls_c/fgs_spd_sel_mode_dn" },
+  { ch = 11, cc = 12, type = "pnp", command_push = "Rotate/aircraft/controls_c/fgs_hdg_mode_sel_up", command_pull = "Rotate/aircraft/controls_c/fgs_hdg_mode_sel_dn" },
+  { ch = 11, cc = 13, type = "pnp", command_push = "Rotate/aircraft/controls_c/fgs_alt_mode_sel_up", command_pull = "Rotate/aircraft/controls_c/fgs_alt_mode_sel_dn" },
+  { ch = 11, cc = 14, type = "cmd", command = "Rotate/aircraft/controls_c/fgs_vs_fpa" },
+  { ch = 11, cc = 15, type = "cmd", command = "Rotate/aircraft/controls_c/eis_wx_on_l" },
+  { ch = 11, cc = 16, type = "cmd", command = "Rotate/aircraft/controls_c/atc_ident" },
+  
+  # Buttons Upper Row
+  { ch = 11, cc = 17, type = "cmd", command = "Rotate/aircraft/controls_c/master_warning_l" },
+  { ch = 11, cc = 18, type = "cmd", command = "Rotate/aircraft/controls_c/master_caution_l" },
+  { ch = 11, cc = 19, type = "cmd", command = "Rotate/aircraft/controls_c/fgs_ias_mach" },
+  { ch = 11, cc = 20, type = "cmd", command = "Rotate/aircraft/controls_c/fgs_hdg_trk" },
+  { ch = 11, cc = 21, type = "cmd", command = "Rotate/aircraft/controls_c/fgs_appr_land" },
+  { ch = 11, cc = 22, type = "cmd", command = "Rotate/aircraft/controls_c/fgs_ft_m" },
+  { ch = 11, cc = 23, type = "cmd", command = "Rotate/aircraft/controls_c/mag_tru_l" },
+  { ch = 11, cc = 24, type = "cmd", command = "Rotate/aircraft/controls_c/eis_range_incr_l" },
+  
+  # Buttons Lower Row
+  { ch = 11, cc = 25, type = "cmd", command = "Rotate/aircraft/controls_c/below_gs_ibhibit_l" },
+  { ch = 11, cc = 26, type = "cmd", command = "Rotate/aircraft/controls_c/hyd_aux_pump_1b" },
+  { ch = 11, cc = 27, type = "cmd", command = "Rotate/aircraft/controls_c/fgs_fms_spd" },
+  { ch = 11, cc = 28, type = "cmd", command = "Rotate/aircraft/controls_c/fgs_nav" },
+  { ch = 11, cc = 29, type = "cmd", command = "Rotate/aircraft/controls_c/fgs_autoflight" },
+  { ch = 11, cc = 30, type = "cmd", command = "Rotate/aircraft/controls_c/fgs_prof" },
+  { ch = 11, cc = 31, type = "cmd", command = "Rotate/aircraft/controls_c/eis_mode_tcas_l" },
+  { ch = 11, cc = 32, type = "cmd", command = "Rotate/aircraft/controls_c/eis_range_decr_l" },
+  
+  #--------------------------------------------------------------------------------------------------------------------
+  # Layer B
+  #--------------------------------------------------------------------------------------------------------------------
+
+  # Slider
+  { ch = 11, cc = 50, type = "sld", command_up = "Rotate/aircraft/controls_c/park_brake_dn", command_down = "Rotate/aircraft/controls_c/park_brake_up" },
+  
+  # Encoders
+  { ch = 11, cc = 51, type = "enc", command_up = "Rotate/aircraft/controls_c/stby_baro_set_up", command_down = "Rotate/aircraft/controls_c/stby_baro_set_dn" },
+  { ch = 11, cc = 52, type = "enc", command_up = "Rotate/aircraft/controls_c/minim_alt_set_r_up", command_down = "Rotate/aircraft/controls_c/minim_alt_set_r_dn" },
+  { ch = 11, cc = 53, sl = "0", type = "enc", command_up = "Rotate/aircraft/controls_c/fgs_panel_lts_up", command_down = "Rotate/aircraft/controls_c/fgs_panel_lts_dn" },
+  { ch = 11, cc = 53, sl = "1", type = "enc", command_up = "Rotate/aircraft/controls_c/fgs_flood_lts_up", command_down = "Rotate/aircraft/controls_c/fgs_flood_lts_dn" },
+  { ch = 11, cc = 54, type = "enc", command_up = "Rotate/aircraft/controls_c/fgs_bank_lim_sel_up", command_down = "Rotate/aircraft/controls_c/fgs_bank_lim_sel_dn" },
+  { ch = 11, cc = 55, sl = "0", type = "enc", command_up = "Rotate/aircraft/controls_c/ovhd_panel_lts_up", command_down = "Rotate/aircraft/controls_c/ovhd_panel_lts_dn" },
+  { ch = 11, cc = 55, sl = "1", type = "enc", command_up = "Rotate/aircraft/controls_c/ovhd_flood_lts_up", command_down = "Rotate/aircraft/controls_c/ovhd_flood_lts_dn" },
+  { ch = 11, cc = 56, sl = "0", type = "enc", command_up = "Rotate/aircraft/controls_c/instr_panel_lts_up", command_down = "Rotate/aircraft/controls_c/instr_panel_lts_dn" },
+  { ch = 11, cc = 56, sl = "1", type = "enc", command_up = "Rotate/aircraft/controls_c/instr_flood_lts_up", command_down = "Rotate/aircraft/controls_c/instr_flood_lts_dn" },
+  { ch = 11, cc = 57, type = "enc", command_up = "Rotate/aircraft/controls_c/wx_mode_sel_up", command_down = "Rotate/aircraft/controls_c/wx_mode_sel_dn" },
+  { ch = 11, cc = 58, type = "enc", label = "auto_brake", dataref = "Rotate/aircraft/controls/auto_brake", modifier_up = 1, modifier_down = -1, value_min = -1, value_max = 3 },
+  
+  # Encoder Buttons
+  { ch = 11, cc = 59, type = "cmd", command = "Rotate/aircraft/controls_c/stby_horizon_erect" },
+  { ch = 11, cc = 60, type = "pnp", command_push = "Rotate/aircraft/controls_c/minim_reset_r", dataref_pull = "Rotate/aircraft/controls/minim_ra_baro_r", values_pull = ["0", "1"] },
+  { ch = 11, cc = 61, type = "cmd", command = "xmidictrl/toggle_sublayer" },
+  { ch = 11, cc = 62, type = "drf", dataref = "Rotate/aircraft/controls/fgs_bank_lim_sel", value_on = "0", value_off = "0" },
+  { ch = 11, cc = 63, type = "cmd", command = "xmidictrl/toggle_sublayer" },
+  { ch = 11, cc = 64, type = "cmd", command = "xmidictrl/toggle_sublayer" },
+  { ch = 11, cc = 65, type = "drf", label = "wx_sys", dataref = "Rotate/aircraft/controls/wx_sys", values = ["0", "1"] },
+  { ch = 11, cc = 66, type = "cmd", command = "Rotate/aircraft/controls_c/anti_skid" },
+  
+  # Buttons Upper Row
+  { ch = 11, cc = 67, type = "cmd", command = "Rotate/aircraft/controls_c/eis_mode_map_l" },
+  { ch = 11, cc = 68, type = "cmd", command = "Rotate/aircraft/controls_c/eis_mode_vor_l" },
+  { ch = 11, cc = 69, type = "cmd", command = "Rotate/aircraft/controls_c/syn_page_eng" },
+  { ch = 11, cc = 70, type = "cmd", command = "Rotate/aircraft/controls_c/eis_show_traffic_l" },
+  { ch = 11, cc = 71, type = "cmd", command = "Rotate/aircraft/controls_c/eis_show_data_l" },
+  { ch = 11, cc = 72, type = "cmd", command = "Rotate/aircraft/controls_c/syn_page_nd" },
+  { ch = 11, cc = 73, type = "cmd", command = "Rotate/aircraft/controls_c/syn_page_conseq" },
+  { ch = 11, cc = 74, type = "cmd", command = "Rotate/aircraft/controls_c/syn_page_status" },
+     
+  # Buttons Lower Row
+  { ch = 11, cc = 75, type = "cmd", command = "Rotate/aircraft/controls_c/eis_mode_plan_l" },
+  { ch = 11, cc = 76, type = "cmd", command = "Rotate/aircraft/controls_c/eis_mode_appr_l" },
+  { ch = 11, cc = 77, type = "cmd", command = "Rotate/aircraft/controls_c/syn_page_hyd" },
+  { ch = 11, cc = 78, type = "cmd", command = "Rotate/aircraft/controls_c/syn_page_elec" },
+  { ch = 11, cc = 79, type = "cmd", command = "Rotate/aircraft/controls_c/syn_page_air" },
+  { ch = 11, cc = 80, type = "cmd", command = "Rotate/aircraft/controls_c/syn_page_fuel" },
+  { ch = 11, cc = 81, type = "cmd", command = "Rotate/aircraft/controls_c/syn_page_config" },
+  { ch = 11, cc = 82, type = "cmd", command = "Rotate/aircraft/controls_c/syn_page_misc" }
+]
+mapping_out = [
+  #--------------------------------------------------------------------------------------------------------------------
+  # Layer A
+  #--------------------------------------------------------------------------------------------------------------------
+
+  # Buttons Upper Row
+  { ch = 11, cc = 17, type = "drf", dataref = "Rotate/aircraft/systems/alert_m_warning_lt", value_on = "1", value_off = "0" },
+  { ch = 11, cc = 18, type = "drf", dataref = "Rotate/aircraft/systems/alert_m_caution_lt", value_on = "1", value_off = "0" },
+
+  # Buttons Lower Row
+  { ch = 11, cc = 25, type = "drf", dataref = "Rotate/aircraft/controls/below_gs_ibhibit_l", value_on = "1", value_off = "0" },
+  { ch = 11, cc = 26, type = "drf", dataref = "Rotate/aircraft/systems/hyd_aux_pump_1_on_lt", value_on = "1", value_off = "0" },
+
+  #--------------------------------------------------------------------------------------------------------------------
+  # Layer B
+  #--------------------------------------------------------------------------------------------------------------------
+
+  # Buttons Upper Row
+  { ch = 11, cc = 69, type = "drf", dataref = "Rotate/aircraft/systems/alert_sdcp_but_lt[0]", value_on = "1", value_off = "0" },
+  
+  # Buttons Lower Row
+  { ch = 11, cc = 77, type = "drf", dataref = "Rotate/aircraft/systems/alert_sdcp_but_lt[1]", value_on = "1", value_off = "0" },
+  { ch = 11, cc = 78, type = "drf", dataref = "Rotate/aircraft/systems/alert_sdcp_but_lt[2]", value_on = "1", value_off = "0" },
+  { ch = 11, cc = 79, type = "drf", dataref = "Rotate/aircraft/systems/alert_sdcp_but_lt[3]", value_on = "1", value_off = "0" },
+  { ch = 11, cc = 80, type = "drf", dataref = "Rotate/aircraft/systems/alert_sdcp_but_lt[4]", value_on = "1", value_off = "0" },
+  { ch = 11, cc = 81, type = "drf", dataref = "Rotate/aircraft/systems/alert_sdcp_but_lt[5]", value_on = "1", value_off = "0" },
+  { ch = 11, cc = 82, type = "drf", dataref = "Rotate/aircraft/systems/alert_sdcp_but_lt[6]", value_on = "1", value_off = "0" }
+]
+
+[xpdr]
+text = "Transponder Mode:"
+values = [
+  { value = "0", text = "STBY" },
+  { value = "1", text = "XPNDR" },
+  { value = "2", text = "TA ONLY" },
+  { value = "3", text = "TA/RA" }
+]
+
+[wx_sys]
+text = "WX Radar:"
+values = [
+  { value = "1", text = "OFF" },
+  { value = "0", text = "SYS 1" }
+]
+
+[auto_brake]
+text = "Auto Brake:"
+values = [
+  { value = "-1", text = "T.O." },
+  { value = "0", text = "OFF" },
+  { value = "1", text = "LAND MIN" },
+  { value = "2", text = "LAND MED" },
+  { value = "3", text = "LAND MAX" }
+]
