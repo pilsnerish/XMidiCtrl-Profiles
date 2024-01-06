@@ -36,14 +36,14 @@
 #----------------------------------------------------------------------------------------------------------------------
 
 title      = "Rotate MD-11"
-version    = "1.01"
+version    = "1.12"
+sl_dataref = "xmidictrl/sublayer"
 
 # Behringer X-Touch Mini
 [[device]]
 name       = "Behringer X-Touch Mini"
 port_in    = 0
 port_out   = 1
-sl_dataref = "xmidictrl/sublayer"
 mapping_in = [
   #--------------------------------------------------------------------------------------------------------------------
   # Layer A
@@ -58,7 +58,7 @@ mapping_in = [
   { ch = 11, cc = 3,  type = "enc", command_up = "Rotate/aircraft/controls_c/fgs_spd_sel_up", command_down = "Rotate/aircraft/controls_c/fgs_spd_sel_dn" },
   { ch = 11, cc = 4,  type = "enc", command_up = "Rotate/aircraft/controls_c/fgs_hdg_sel_up", command_down = "Rotate/aircraft/controls_c/fgs_hdg_sel_dn" },
   { ch = 11, cc = 5,  type = "enc", command_up = "Rotate/aircraft/controls_c/fgs_alt_sel_up", command_down = "Rotate/aircraft/controls_c/fgs_alt_sel_dn" },
-  { ch = 11, cc = 6,  type = "enc", command_up = "Rotate/aircraft/controls_c/fgs_pitch_sel_up", command_down = "Rotate/aircraft/controls_c/fgs_pitch_sel_dn" },
+  { ch = 11, cc = 6,  type = "enc", command_up = "Rotate/aircraft/controls_c/fgs_pitch_sel_dn", command_down = "Rotate/aircraft/controls_c/fgs_pitch_sel_up" },
   { ch = 11, cc = 7,  type = "enc", command_up = "Rotate/aircraft/controls_c/eis_wx_brt_l_up", command_down = "Rotate/aircraft/controls_c/eis_wx_brt_l_dn" },
   { ch = 11, cc = 8,  type = "enc", label = "xpdr", dataref = "Rotate/aircraft/controls/atc_mode_sel", modifier_up = 1, modifier_down = -1, value_min = 0, value_max = 3 },
   
