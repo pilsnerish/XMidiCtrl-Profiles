@@ -1,7 +1,7 @@
 #------------------------------------------------------------------------------#
 # XMidiCtrl include file for Behringer X-Touch Mini
 #
-# Disables all encoder ring LEDs
+# Forces all encoder ring LEDs to be turned off after use
 #
 # By Pilsner, 2024-01-19, https://github.com/pilsnerish
 #------------------------------------------------------------------------------#
@@ -20,12 +20,12 @@
 #------------------------------------------------------------------------------#
 
 mapping_out = [
-  { ch = 1, cc =  9, type = "con", velocity = 0 },
-  { ch = 1, cc = 10, type = "con", velocity = 0 },
-  { ch = 1, cc = 11, type = "con", velocity = 0 },
-  { ch = 1, cc = 12, type = "con", velocity = 0 },
-  { ch = 1, cc = 13, type = "con", velocity = 0 },
-  { ch = 1, cc = 14, type = "con", velocity = 0 },
-  { ch = 1, cc = 15, type = "con", velocity = 0 },
-  { ch = 1, cc = 16, type = "con", velocity = 0 },
+  { ch = 1, cc =  9, type = "con", data_2 = 0 },
+  { ch = 1, cc = 10, type = "con", data_2 = 0 },
+  { ch = 1, cc = 11, type = "con", data_2 = 0 },
+  { ch = 1, cc = 12, type = "con", data_2 = 0 },
+  { ch = 1, cc = 13, type = "con", data_2 = 0 },
+  { ch = 1, cc = 14, type = "con", data_2 = 0 },
+  { ch = 1, cc = 15, type = "con", data_2 = 0 },
+  { ch = 1, cc = 16, type = "con", data_2 = 0 },
 ]

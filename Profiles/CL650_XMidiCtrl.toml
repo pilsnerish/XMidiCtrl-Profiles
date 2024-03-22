@@ -26,13 +26,14 @@
 #------------------------------------------------------------------------------#
 
 title      = "Hot Start CL-650 by Pilsner"
-version    = "1"
-sl_dataref = "CL650/pilot_seat"
+version    = "2"
 
 [[device]]
 name       = "Behringer X-Touch Mini"
 port_in    = 0
 port_out   = 1
+include    = [ "disable_leds" ]
+sl_dataref = "CL650/pilot_seat"
 mapping_in = [
   #----------------------------------------------------------------------------#
   # Layer A
