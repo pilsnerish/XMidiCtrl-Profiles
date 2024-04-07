@@ -1,2 +1,2 @@
-- Root reposistory contents will work with v1.12
-- `Profiles`/`Includes` directories are placed in `...\Output\preferences\XMidiCtrl` and work with v1.13+
+- Root of repository contains configurations that will work with v1.12
+- `Profiles`/`Includes` directories are placed in `...\Output\preferences\XMidiCtrl` and will only work with v1.13+
