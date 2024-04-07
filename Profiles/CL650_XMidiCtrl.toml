@@ -38,18 +38,18 @@ mapping_in = [
   #----------------------------------------------------------------------------#
   # Layer A
   #----------------------------------------------------------------------------#
-  { ch = 11, cc = 1, type = "enc", mode = "range", sl = "0", command_up = "CL650/DCP/1/baro_up", command_down = "CL650/DCP/1/baro_down" },
-  { ch = 11, cc = 1, type = "enc", mode = "range", sl = "1", command_up = "CL650/ISI/baro_up", command_down = "CL650/ISI/baro_down" },
-  { ch = 11, cc = 2, type = "enc", mode = "range", command_up = "CL650/FCP/crs1_up", command_down = "CL650/FCP/crs1_down" },
-  { ch = 11, cc = 3, type = "enc", mode = "range", command_up = "CL650/FCP/vs_pitch_up", command_down = "CL650/FCP/vs_pitch_down" },
-  { ch = 11, cc = 4, type = "enc", mode = "range", command_up = "CL650/FCP/speed_up", command_down = "CL650/FCP/speed_down" },
-  { ch = 11, cc = 5, type = "enc", mode = "range", command_up = "CL650/FCP/hdg_up", command_down = "CL650/FCP/hdg_down" },
-  { ch = 11, cc = 6, type = "enc", mode = "range", command_up = "CL650/FCP/alt_up", command_down = "CL650/FCP/alt_down" },
-  { ch = 11, cc = 7, type = "enc", mode = "range", command_up = "CL650/FCP/crs2_up", command_down = "CL650/FCP/crs2_down" },
-  { ch = 11, cc = 8, type = "enc", mode = "range", sl = "0", command_up = "CL650/ISI/baro_up", command_down = "CL650/ISI/baro_down" },
-  { ch = 11, cc = 8, type = "enc", mode = "range", sl = "1", command_up = "CL650/DCP/2/baro_up", command_down = "CL650/DCP/2/baro_down" },
-  { ch = 11, cc = 9, type = "sld", sl = "0", dataref = "CL650/overhead/map_lt/lh" },
-  { ch = 11, cc = 9, type = "sld", sl = "1", dataref = "CL650/overhead/map_lt/rh" },
+  { ch = 11, cc   =  1, type = "enc", mode = "range", sl = "0", command_up = "CL650/DCP/1/baro_up", command_down = "CL650/DCP/1/baro_down" },
+  { ch = 11, cc   =  1, type = "enc", mode = "range", sl = "1", command_up = "CL650/ISI/baro_up", command_down = "CL650/ISI/baro_down" },
+  { ch = 11, cc   =  2, type = "enc", mode = "range", command_up = "CL650/FCP/crs1_up", command_down = "CL650/FCP/crs1_down" },
+  { ch = 11, cc   =  3, type = "enc", mode = "range", command_up = "CL650/FCP/vs_pitch_up", command_down = "CL650/FCP/vs_pitch_down" },
+  { ch = 11, cc   =  4, type = "enc", mode = "range", command_up = "CL650/FCP/speed_up", command_down = "CL650/FCP/speed_down" },
+  { ch = 11, cc   =  5, type = "enc", mode = "range", command_up = "CL650/FCP/hdg_up", command_down = "CL650/FCP/hdg_down" },
+  { ch = 11, cc   =  6, type = "enc", mode = "range", command_up = "CL650/FCP/alt_up", command_down = "CL650/FCP/alt_down" },
+  { ch = 11, cc   =  7, type = "enc", mode = "range", command_up = "CL650/FCP/crs2_up", command_down = "CL650/FCP/crs2_down" },
+  { ch = 11, cc   =  8, type = "enc", mode = "range", sl = "0", command_up = "CL650/ISI/baro_up", command_down = "CL650/ISI/baro_down" },
+  { ch = 11, cc   =  8, type = "enc", mode = "range", sl = "1", command_up = "CL650/DCP/2/baro_up", command_down = "CL650/DCP/2/baro_down" },
+  { ch = 11, cc   =  9, type = "sld", sl = "0", dataref = "CL650/overhead/map_lt/lh" },
+  { ch = 11, cc   =  9, type = "sld", sl = "1", dataref = "CL650/overhead/map_lt/rh" },
 
   { ch = 11, note =  0, type = "cmd", sl = "0", command = "CL650/DCP/1/baro_push" },
   { ch = 11, note =  0, type = "cmd", sl = "1", command = "CL650/ISI/std" },
@@ -81,22 +81,24 @@ mapping_in = [
   #----------------------------------------------------------------------------#
   # Layer B
   #----------------------------------------------------------------------------#
-  { ch = 11, cc = 11, type = "enc", mode = "range", sl = "0", command_up = "CL650/DCP/1/menu_adv_up", command_down = "CL650/DCP/1/menu_adv_down" },
-  { ch = 11, cc = 11, type = "enc", mode = "range", sl = "1", command_up = "CL650/DCP/2/menu_adv_up", command_down = "CL650/DCP/2/menu_adv_down" },
-  { ch = 11, cc = 12, type = "enc", mode = "range", sl = "0", command_up = "CL650/DCP/1/menu_data_up", command_down = "CL650/DCP/1/menu_data_down" },
-  { ch = 11, cc = 12, type = "enc", mode = "range", sl = "1", command_up = "CL650/DCP/2/menu_data_up", command_down = "CL650/DCP/2/menu_data_down" },
-  { ch = 11, cc = 13, type = "enc", mode = "range", sl = "0", command_up = "CL650/DCP/1/tilt_up", command_down = "CL650/DCP/1/tilt_down" },
-  { ch = 11, cc = 13, type = "enc", mode = "range", sl = "1", command_up = "CL650/DCP/2/tilt_up", command_down = "CL650/DCP/2/tilt_down" },
-  { ch = 11, cc = 14, type = "enc", mode = "range", sl = "0", command_up = "CL650/DCP/1/range_up", command_down = "CL650/DCP/1/range_down" },
-  { ch = 11, cc = 14, type = "enc", mode = "range", sl = "1", command_up = "CL650/DCP/2/range_up", command_down = "CL650/DCP/2/range_down" },
-  { ch = 11, cc = 15, type = "enc", mode = "range", sl = "0", command_up = "CL650/CCP/1/menu_adv_up", command_down = "CL650/CCP/1/menu_adv_down" },
-  { ch = 11, cc = 15, type = "enc", mode = "range", sl = "1", command_up = "CL650/CCP/2/menu_adv_up", command_down = "CL650/CCP/2/menu_adv_down" },
-  { ch = 11, cc = 16, type = "enc", mode = "range", sl = "0", command_up = "CL650/CCP/1/menu_data_up", command_down = "CL650/CCP/1/menu_data_down" },
-  { ch = 11, cc = 16, type = "enc", mode = "range", sl = "1", command_up = "CL650/CCP/2/menu_data_up", command_down = "CL650/CCP/2/menu_data_down" },
-  { ch = 11, cc = 17, type = "enc", mode = "range", sl = "0", command_up = "CL650/CCP/1/radio_adv_up", command_down = "CL650/CCP/1/radio_adv_down" },
-  { ch = 11, cc = 17, type = "enc", mode = "range", sl = "1", command_up = "CL650/CCP/2/radio_adv_up", command_down = "CL650/CCP/2/radio_adv_down" },
-  { ch = 11, cc = 18, type = "enc", mode = "range", sl = "0", command_up = "CL650/CCP/1/radio_data_up", command_down = "CL650/CCP/1/radio_data_down" },
-  { ch = 11, cc = 18, type = "enc", mode = "range", sl = "1", command_up = "CL650/CCP/2/radio_data_up", command_down = "CL650/CCP/2/radio_data_down" },
+  { ch = 11, cc   = 10, type = "sld", sl = "0", dataref = "CL650/overhead/map_lt/lh" },
+  { ch = 11, cc   = 10, type = "sld", sl = "1", dataref = "CL650/overhead/map_lt/rh" },
+  { ch = 11, cc   = 11, type = "enc", mode = "range", sl = "0", command_up = "CL650/DCP/1/menu_adv_up", command_down = "CL650/DCP/1/menu_adv_down" },
+  { ch = 11, cc   = 11, type = "enc", mode = "range", sl = "1", command_up = "CL650/DCP/2/menu_adv_up", command_down = "CL650/DCP/2/menu_adv_down" },
+  { ch = 11, cc   = 12, type = "enc", mode = "range", sl = "0", command_up = "CL650/DCP/1/menu_data_up", command_down = "CL650/DCP/1/menu_data_down" },
+  { ch = 11, cc   = 12, type = "enc", mode = "range", sl = "1", command_up = "CL650/DCP/2/menu_data_up", command_down = "CL650/DCP/2/menu_data_down" },
+  { ch = 11, cc   = 13, type = "enc", mode = "range", sl = "0", command_up = "CL650/DCP/1/tilt_up", command_down = "CL650/DCP/1/tilt_down" },
+  { ch = 11, cc   = 13, type = "enc", mode = "range", sl = "1", command_up = "CL650/DCP/2/tilt_up", command_down = "CL650/DCP/2/tilt_down" },
+  { ch = 11, cc   = 14, type = "enc", mode = "range", sl = "0", command_up = "CL650/DCP/1/range_up", command_down = "CL650/DCP/1/range_down" },
+  { ch = 11, cc   = 14, type = "enc", mode = "range", sl = "1", command_up = "CL650/DCP/2/range_up", command_down = "CL650/DCP/2/range_down" },
+  { ch = 11, cc   = 15, type = "enc", mode = "range", sl = "0", command_up = "CL650/CCP/1/menu_adv_up", command_down = "CL650/CCP/1/menu_adv_down" },
+  { ch = 11, cc   = 15, type = "enc", mode = "range", sl = "1", command_up = "CL650/CCP/2/menu_adv_up", command_down = "CL650/CCP/2/menu_adv_down" },
+  { ch = 11, cc   = 16, type = "enc", mode = "range", sl = "0", command_up = "CL650/CCP/1/menu_data_up", command_down = "CL650/CCP/1/menu_data_down" },
+  { ch = 11, cc   = 16, type = "enc", mode = "range", sl = "1", command_up = "CL650/CCP/2/menu_data_up", command_down = "CL650/CCP/2/menu_data_down" },
+  { ch = 11, cc   = 17, type = "enc", mode = "range", sl = "0", command_up = "CL650/CCP/1/radio_adv_up", command_down = "CL650/CCP/1/radio_adv_down" },
+  { ch = 11, cc   = 17, type = "enc", mode = "range", sl = "1", command_up = "CL650/CCP/2/radio_adv_up", command_down = "CL650/CCP/2/radio_adv_down" },
+  { ch = 11, cc   = 18, type = "enc", mode = "range", sl = "0", command_up = "CL650/CCP/1/radio_data_up", command_down = "CL650/CCP/1/radio_data_down" },
+  { ch = 11, cc   = 18, type = "enc", mode = "range", sl = "1", command_up = "CL650/CCP/2/radio_data_up", command_down = "CL650/CCP/2/radio_data_down" },
 
   { ch = 11, note = 24, type = "cmd", sl = "0", command = "CL650/DCP/1/menu_push" },
   { ch = 11, note = 24, type = "cmd", sl = "1", command = "CL650/DCP/2/menu_push" },
@@ -151,20 +153,40 @@ mapping_out = [
   #----------------------------------------------------------------------------#
   # Layer A
   #----------------------------------------------------------------------------#
-  { ch = 11, note =  8, velocity_on = 1, type = "drf", dataref = [ "CL650/lamps/glareshield/ats_L", "CL650/lamps/glareshield/ats_R" ], value_off = "0" },
+  { ch = 11, note =  8, data_2_on = 1, type = "drf", dataref = [ "CL650/lamps/glareshield/ats_L", "CL650/lamps/glareshield/ats_R" ], value_off = "0" },
   # ch = 11, note =  9
-  { ch = 11, note = 10, velocity_on = 1, type = "drf", dataref = [ "CL650/lamps/glareshield/FCP/vs_1", "CL650/lamps/glareshield/FCP/vs_2" ], value_off = "0" },
-  { ch = 11, note = 11, velocity_on = 1, type = "drf", dataref = [ "CL650/lamps/glareshield/FCP/flc_1", "CL650/lamps/glareshield/FCP/flc_2" ], value_off = "0" },
-  { ch = 11, note = 12, velocity_on = 1, type = "drf", dataref = [ "CL650/lamps/glareshield/FCP/hdg_1", "CL650/lamps/glareshield/FCP/hdg_2" ], value_off = "0" },
-  { ch = 11, note = 13, velocity_on = 1, type = "drf", dataref = [ "CL650/lamps/glareshield/FCP/alt_1", "CL650/lamps/glareshield/FCP/alt_2" ], value_off = "0" },
+  { ch = 11, note = 10, data_2_on = 1, type = "drf", dataref = [ "CL650/lamps/glareshield/FCP/vs_1", "CL650/lamps/glareshield/FCP/vs_2" ], value_off = "0" },
+  { ch = 11, note = 11, data_2_on = 1, type = "drf", dataref = [ "CL650/lamps/glareshield/FCP/flc_1", "CL650/lamps/glareshield/FCP/flc_2" ], value_off = "0" },
+  { ch = 11, note = 12, data_2_on = 1, type = "drf", dataref = [ "CL650/lamps/glareshield/FCP/hdg_1", "CL650/lamps/glareshield/FCP/hdg_2" ], value_off = "0" },
+  { ch = 11, note = 13, data_2_on = 1, type = "drf", dataref = [ "CL650/lamps/glareshield/FCP/alt_1", "CL650/lamps/glareshield/FCP/alt_2" ], value_off = "0" },
   # ch = 11, note = 14
-  { ch = 11, note = 15, velocity_on = 1, type = "drf", dataref = [ "CL650/lamps/glareshield/FCP/ap_eng_1", "CL650/lamps/glareshield/FCP/ap_eng_2" ], value_off = "0" },
-  { ch = 11, note = 16, velocity_on = 1, type = "drf", dataref = [ "CL650/lamps/glareshield/master_warn_L", "CL650/lamps/glareshield/master_caut_L" ], value_off = "0" },
+  { ch = 11, note = 15, data_2_on = 1, type = "drf", dataref = [ "CL650/lamps/glareshield/FCP/ap_eng_1", "CL650/lamps/glareshield/FCP/ap_eng_2" ], value_off = "0" },
+  { ch = 11, note = 16, data_2_on = 1, type = "drf", dataref = [ "CL650/lamps/glareshield/master_warn_L", "CL650/lamps/glareshield/master_caut_L" ], value_off = "0" },
   # ch = 11, note = 17
-  { ch = 11, note = 18, velocity_on = 1, type = "drf", dataref = [ "CL650/lamps/glareshield/FCP/vnav_1", "CL650/lamps/glareshield/FCP/vnav_2" ], value_off = "0" },
-  { ch = 11, note = 19, velocity_on = 1, type = "drf", dataref = [ "CL650/lamps/glareshield/FCP/appr_1", "CL650/lamps/glareshield/FCP/appr_2" ], value_off = "0" },
-  { ch = 11, note = 20, velocity_on = 1, type = "drf", dataref = [ "CL650/lamps/glareshield/FCP/nav_1", "CL650/lamps/glareshield/FCP/nav_2" ], value_off = "0" },
-  { ch = 11, note = 21, velocity_on = 1, type = "drf", dataref = [ "CL650/lamps/glareshield/FCP/bc_1", "CL650/lamps/glareshield/FCP/bc_2" ], value_off = "0" },
+  { ch = 11, note = 18, data_2_on = 1, type = "drf", dataref = [ "CL650/lamps/glareshield/FCP/vnav_1", "CL650/lamps/glareshield/FCP/vnav_2" ], value_off = "0" },
+  { ch = 11, note = 19, data_2_on = 1, type = "drf", dataref = [ "CL650/lamps/glareshield/FCP/appr_1", "CL650/lamps/glareshield/FCP/appr_2" ], value_off = "0" },
+  { ch = 11, note = 20, data_2_on = 1, type = "drf", dataref = [ "CL650/lamps/glareshield/FCP/nav_1", "CL650/lamps/glareshield/FCP/nav_2" ], value_off = "0" },
+  { ch = 11, note = 21, data_2_on = 1, type = "drf", dataref = [ "CL650/lamps/glareshield/FCP/bc_1", "CL650/lamps/glareshield/FCP/bc_2" ], value_off = "0" },
   # ch = 11, note = 22
-  { ch = 11, note = 23, velocity_on = 1, type = "drf", dataref = [ "CL650/lamps/glareshield/master_warn_R", "CL650/lamps/glareshield/master_caut_R" ], value_off = "0" },
+  { ch = 11, note = 23, data_2_on = 1, type = "drf", dataref = [ "CL650/lamps/glareshield/master_warn_R", "CL650/lamps/glareshield/master_caut_R" ], value_off = "0" },
+
+  #----------------------------------------------------------------------------#
+  # Layer B
+  #----------------------------------------------------------------------------#
+  # ch = 11, note = 32
+  # ch = 11, note = 33
+  # ch = 11, note = 34
+  # ch = 11, note = 35
+  # ch = 11, note = 36
+  # ch = 11, note = 37
+  # ch = 11, note = 38
+  # ch = 11, note = 39
+  # ch = 11, note = 40
+  # ch = 11, note = 41
+  # ch = 11, note = 42
+  # ch = 11, note = 43
+  # ch = 11, note = 44
+  # ch = 11, note = 45
+  # ch = 11, note = 46
+  # ch = 11, note = 47
 ]
